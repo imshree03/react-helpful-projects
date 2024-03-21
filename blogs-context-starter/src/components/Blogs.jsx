@@ -7,7 +7,7 @@ const Blogs = () => {
   const { loading, posts } = useContext(AppContext);
 
   return (
-    <div>
+    <div className="w-11/12 max-w-[630px] py-3 flex flex-col gap-y-4 mt-16 mb-16 justify-center items-center">
       {loading ? (
         <Spinner />
       ) : posts.length === 0 ? (
