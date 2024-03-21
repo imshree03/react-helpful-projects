@@ -3,7 +3,7 @@ import "./spinner.css";
 
 const Spinner = () => {
   return (
-    <div>
+    <div className="flex">
       <div className="spinner"></div>
     </div>
   );
