@@ -12,16 +12,20 @@ const CartItem = ({ item }) => {
   };
 
   return (
-    <div>
+    <div className="flex flex-col items-center justify-between p-4 hover:scale-110 transition duration-300 ease-in gap-3 mt-10 ml-5 rounded-xl outline">
       <div>
-        <div>
-          <img src={item.image} />
+        <div className="h-[180px]">
+          <img src={item.image} alt="Image" className="h-full w-full" />
         </div>
         <div>
-          <h1>{item.title}</h1>
-          <h1>{item.description}</h1>
-          <div>
-            <p>{item.price}</p>
+          <h1 className="text-gray-700 font-semibold text-lg w-40 mt-1 truncate">
+            {item.title}
+          </h1>
+          <h1 className="text-gray-400 w-40 font-normal text-[10px]">
+            {item.description}
+          </h1>
+          <div className="flex justify-between gap-12 items-center w-full mt-5">
+            <p>${item.price}</p>
             <div onClick={removeFromCart}>
               <FcDeleteDatabase />
             </div>
